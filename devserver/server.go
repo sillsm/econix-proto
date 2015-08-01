@@ -11,21 +11,41 @@ type agent struct {
 	value int
 }
 
-var agents []agent
+var agents []*agent
+var broadcastGroup []chan bool
+
+func broadcastTick(cs []chan bool) {
+	for _, c := range cs {
+		c <- true
+	}
+}
 
 func hello(w http.ResponseWriter, r *http.Request) {
+	broadcastTick(broadcastGroup)
 	for _, a := range agents {
 		io.WriteString(w,
 			fmt.Sprintf("Agent: %v, Val:%v\n", a.name, a.value))
 	}
 }
 
+func addAgent(name string, v int) {
+	go func() {
+		agent := &agent{name, v}
+		agents = append(agents, agent)
+		tick := make(chan bool, 1)
+		broadcastGroup = append(broadcastGroup, tick)
+		for {
+			<-tick // Wait for tick.
+			agent.value++
+
+		}
+	}()
+}
+
 func main() {
-	agents = []agent{
-		{"A", 4},
-		{"B", 0},
-		{"Bank", 50},
-	}
+        addAgent("a", 0)
+        addAgent("b", 1)
+        addAgent("bank", 50)
 	http.HandleFunc("/", hello)
 	http.ListenAndServe(":8080", nil)
 }
