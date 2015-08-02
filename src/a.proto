@@ -1,6 +1,6 @@
-package ProtobufTest;
+package Econix;
 
-message TestMessage {
+message Transaction {
   required string clientName = 1;
   required int32 clientId = 2;
   optional string description = 3 [default = "NONE"];

@@ -1,6 +1,7 @@
 package main
 
 import (
+        "github.com/sillsm/econix-proto/compiled"
 	"fmt"
 	"io"
 	"net/http"
