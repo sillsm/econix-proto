@@ -16,17 +16,17 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
-namespace ProtobufTest {
+namespace Econix {
 
 namespace {
 
-const ::google::protobuf::Descriptor* TestMessage_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* Transaction_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  TestMessage_reflection_ = NULL;
-const ::google::protobuf::Descriptor* TestMessage_MsgItem_descriptor_ = NULL;
+  Transaction_reflection_ = NULL;
+const ::google::protobuf::Descriptor* Transaction_MsgItem_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  TestMessage_MsgItem_reflection_ = NULL;
-const ::google::protobuf::EnumDescriptor* TestMessage_ItemType_descriptor_ = NULL;
+  Transaction_MsgItem_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* Transaction_ItemType_descriptor_ = NULL;
 
 }  // namespace
 
@@ -37,43 +37,43 @@ void protobuf_AssignDesc_a_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "a.proto");
   GOOGLE_CHECK(file != NULL);
-  TestMessage_descriptor_ = file->message_type(0);
-  static const int TestMessage_offsets_[4] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage, clientname_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage, clientid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage, description_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage, messageitems_),
+  Transaction_descriptor_ = file->message_type(0);
+  static const int Transaction_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction, clientname_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction, clientid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction, description_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction, messageitems_),
   };
-  TestMessage_reflection_ =
+  Transaction_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      TestMessage_descriptor_,
-      TestMessage::default_instance_,
-      TestMessage_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage, _unknown_fields_),
+      Transaction_descriptor_,
+      Transaction::default_instance_,
+      Transaction_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(TestMessage));
-  TestMessage_MsgItem_descriptor_ = TestMessage_descriptor_->nested_type(0);
-  static const int TestMessage_MsgItem_offsets_[4] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage_MsgItem, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage_MsgItem, itemname_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage_MsgItem, itemvalue_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage_MsgItem, itemtype_),
+      sizeof(Transaction));
+  Transaction_MsgItem_descriptor_ = Transaction_descriptor_->nested_type(0);
+  static const int Transaction_MsgItem_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction_MsgItem, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction_MsgItem, itemname_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction_MsgItem, itemvalue_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction_MsgItem, itemtype_),
   };
-  TestMessage_MsgItem_reflection_ =
+  Transaction_MsgItem_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      TestMessage_MsgItem_descriptor_,
-      TestMessage_MsgItem::default_instance_,
-      TestMessage_MsgItem_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage_MsgItem, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TestMessage_MsgItem, _unknown_fields_),
+      Transaction_MsgItem_descriptor_,
+      Transaction_MsgItem::default_instance_,
+      Transaction_MsgItem_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction_MsgItem, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Transaction_MsgItem, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(TestMessage_MsgItem));
-  TestMessage_ItemType_descriptor_ = TestMessage_descriptor_->enum_type(0);
+      sizeof(Transaction_MsgItem));
+  Transaction_ItemType_descriptor_ = Transaction_descriptor_->enum_type(0);
 }
 
 namespace {
@@ -87,19 +87,19 @@ inline void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    TestMessage_descriptor_, &TestMessage::default_instance());
+    Transaction_descriptor_, &Transaction::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    TestMessage_MsgItem_descriptor_, &TestMessage_MsgItem::default_instance());
+    Transaction_MsgItem_descriptor_, &Transaction_MsgItem::default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_a_2eproto() {
-  delete TestMessage::default_instance_;
-  delete TestMessage_reflection_;
-  delete TestMessage::_default_description_;
-  delete TestMessage_MsgItem::default_instance_;
-  delete TestMessage_MsgItem_reflection_;
+  delete Transaction::default_instance_;
+  delete Transaction_reflection_;
+  delete Transaction::_default_description_;
+  delete Transaction_MsgItem::default_instance_;
+  delete Transaction_MsgItem_reflection_;
 }
 
 void protobuf_AddDesc_a_2eproto() {
@@ -109,23 +109,22 @@ void protobuf_AddDesc_a_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\007a.proto\022\014ProtobufTest\"\261\002\n\013TestMessage\022"
-    "\022\n\nclientName\030\001 \002(\t\022\020\n\010clientId\030\002 \002(\005\022\031\n"
-    "\013description\030\003 \001(\t:\004NONE\0227\n\014messageitems"
-    "\030\004 \003(\0132!.ProtobufTest.TestMessage.MsgIte"
-    "m\032p\n\007MsgItem\022\n\n\002id\030\001 \002(\005\022\020\n\010itemName\030\002 \001"
-    "(\t\022\021\n\titemValue\030\003 \001(\005\0224\n\010itemType\030\004 \001(\0162"
-    "\".ProtobufTest.TestMessage.ItemType\"6\n\010I"
-    "temType\022\t\n\005TypeX\020\000\022\t\n\005TypeY\020\001\022\t\n\005TypeZ\020\002"
-    "\022\t\n\005TypeA\020\003", 331);
+    "\n\007a.proto\022\006Econix\"\245\002\n\013Transaction\022\022\n\ncli"
+    "entName\030\001 \002(\t\022\020\n\010clientId\030\002 \002(\005\022\031\n\013descr"
+    "iption\030\003 \001(\t:\004NONE\0221\n\014messageitems\030\004 \003(\013"
+    "2\033.Econix.Transaction.MsgItem\032j\n\007MsgItem"
+    "\022\n\n\002id\030\001 \002(\005\022\020\n\010itemName\030\002 \001(\t\022\021\n\titemVa"
+    "lue\030\003 \001(\005\022.\n\010itemType\030\004 \001(\0162\034.Econix.Tra"
+    "nsaction.ItemType\"6\n\010ItemType\022\t\n\005TypeX\020\000"
+    "\022\t\n\005TypeY\020\001\022\t\n\005TypeZ\020\002\022\t\n\005TypeA\020\003", 313);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "a.proto", &protobuf_RegisterTypes);
-  TestMessage::_default_description_ =
+  Transaction::_default_description_ =
       new ::std::string("NONE", 4);
-  TestMessage::default_instance_ = new TestMessage();
-  TestMessage_MsgItem::default_instance_ = new TestMessage_MsgItem();
-  TestMessage::default_instance_->InitAsDefaultInstance();
-  TestMessage_MsgItem::default_instance_->InitAsDefaultInstance();
+  Transaction::default_instance_ = new Transaction();
+  Transaction_MsgItem::default_instance_ = new Transaction_MsgItem();
+  Transaction::default_instance_->InitAsDefaultInstance();
+  Transaction_MsgItem::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_a_2eproto);
 }
 
@@ -138,11 +137,11 @@ struct StaticDescriptorInitializer_a_2eproto {
 
 // ===================================================================
 
-const ::google::protobuf::EnumDescriptor* TestMessage_ItemType_descriptor() {
+const ::google::protobuf::EnumDescriptor* Transaction_ItemType_descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return TestMessage_ItemType_descriptor_;
+  return Transaction_ItemType_descriptor_;
 }
-bool TestMessage_ItemType_IsValid(int value) {
+bool Transaction_ItemType_IsValid(int value) {
   switch(value) {
     case 0:
     case 1:
@@ -155,36 +154,36 @@ bool TestMessage_ItemType_IsValid(int value) {
 }
 
 #ifndef _MSC_VER
-const TestMessage_ItemType TestMessage::TypeX;
-const TestMessage_ItemType TestMessage::TypeY;
-const TestMessage_ItemType TestMessage::TypeZ;
-const TestMessage_ItemType TestMessage::TypeA;
-const TestMessage_ItemType TestMessage::ItemType_MIN;
-const TestMessage_ItemType TestMessage::ItemType_MAX;
-const int TestMessage::ItemType_ARRAYSIZE;
+const Transaction_ItemType Transaction::TypeX;
+const Transaction_ItemType Transaction::TypeY;
+const Transaction_ItemType Transaction::TypeZ;
+const Transaction_ItemType Transaction::TypeA;
+const Transaction_ItemType Transaction::ItemType_MIN;
+const Transaction_ItemType Transaction::ItemType_MAX;
+const int Transaction::ItemType_ARRAYSIZE;
 #endif  // _MSC_VER
 #ifndef _MSC_VER
-const int TestMessage_MsgItem::kIdFieldNumber;
-const int TestMessage_MsgItem::kItemNameFieldNumber;
-const int TestMessage_MsgItem::kItemValueFieldNumber;
-const int TestMessage_MsgItem::kItemTypeFieldNumber;
+const int Transaction_MsgItem::kIdFieldNumber;
+const int Transaction_MsgItem::kItemNameFieldNumber;
+const int Transaction_MsgItem::kItemValueFieldNumber;
+const int Transaction_MsgItem::kItemTypeFieldNumber;
 #endif  // !_MSC_VER
 
-TestMessage_MsgItem::TestMessage_MsgItem()
+Transaction_MsgItem::Transaction_MsgItem()
   : ::google::protobuf::Message() {
   SharedCtor();
 }
 
-void TestMessage_MsgItem::InitAsDefaultInstance() {
+void Transaction_MsgItem::InitAsDefaultInstance() {
 }
 
-TestMessage_MsgItem::TestMessage_MsgItem(const TestMessage_MsgItem& from)
+Transaction_MsgItem::Transaction_MsgItem(const Transaction_MsgItem& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
 }
 
-void TestMessage_MsgItem::SharedCtor() {
+void Transaction_MsgItem::SharedCtor() {
   _cached_size_ = 0;
   id_ = 0;
   itemname_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
@@ -193,11 +192,11 @@ void TestMessage_MsgItem::SharedCtor() {
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-TestMessage_MsgItem::~TestMessage_MsgItem() {
+Transaction_MsgItem::~Transaction_MsgItem() {
   SharedDtor();
 }
 
-void TestMessage_MsgItem::SharedDtor() {
+void Transaction_MsgItem::SharedDtor() {
   if (itemname_ != &::google::protobuf::internal::kEmptyString) {
     delete itemname_;
   }
@@ -205,28 +204,28 @@ void TestMessage_MsgItem::SharedDtor() {
   }
 }
 
-void TestMessage_MsgItem::SetCachedSize(int size) const {
+void Transaction_MsgItem::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* TestMessage_MsgItem::descriptor() {
+const ::google::protobuf::Descriptor* Transaction_MsgItem::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return TestMessage_MsgItem_descriptor_;
+  return Transaction_MsgItem_descriptor_;
 }
 
-const TestMessage_MsgItem& TestMessage_MsgItem::default_instance() {
+const Transaction_MsgItem& Transaction_MsgItem::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_a_2eproto();
   return *default_instance_;
 }
 
-TestMessage_MsgItem* TestMessage_MsgItem::default_instance_ = NULL;
+Transaction_MsgItem* Transaction_MsgItem::default_instance_ = NULL;
 
-TestMessage_MsgItem* TestMessage_MsgItem::New() const {
-  return new TestMessage_MsgItem;
+Transaction_MsgItem* Transaction_MsgItem::New() const {
+  return new Transaction_MsgItem;
 }
 
-void TestMessage_MsgItem::Clear() {
+void Transaction_MsgItem::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     id_ = 0;
     if (has_itemname()) {
@@ -241,7 +240,7 @@ void TestMessage_MsgItem::Clear() {
   mutable_unknown_fields()->Clear();
 }
 
-bool TestMessage_MsgItem::MergePartialFromCodedStream(
+bool Transaction_MsgItem::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
   ::google::protobuf::uint32 tag;
@@ -295,7 +294,7 @@ bool TestMessage_MsgItem::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .ProtobufTest.TestMessage.ItemType itemType = 4;
+      // optional .Econix.Transaction.ItemType itemType = 4;
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -304,8 +303,8 @@ bool TestMessage_MsgItem::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          if (::ProtobufTest::TestMessage_ItemType_IsValid(value)) {
-            set_itemtype(static_cast< ::ProtobufTest::TestMessage_ItemType >(value));
+          if (::Econix::Transaction_ItemType_IsValid(value)) {
+            set_itemtype(static_cast< ::Econix::Transaction_ItemType >(value));
           } else {
             mutable_unknown_fields()->AddVarint(4, value);
           }
@@ -332,7 +331,7 @@ bool TestMessage_MsgItem::MergePartialFromCodedStream(
 #undef DO_
 }
 
-void TestMessage_MsgItem::SerializeWithCachedSizes(
+void Transaction_MsgItem::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // required int32 id = 1;
   if (has_id()) {
@@ -353,7 +352,7 @@ void TestMessage_MsgItem::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->itemvalue(), output);
   }
 
-  // optional .ProtobufTest.TestMessage.ItemType itemType = 4;
+  // optional .Econix.Transaction.ItemType itemType = 4;
   if (has_itemtype()) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       4, this->itemtype(), output);
@@ -365,7 +364,7 @@ void TestMessage_MsgItem::SerializeWithCachedSizes(
   }
 }
 
-::google::protobuf::uint8* TestMessage_MsgItem::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* Transaction_MsgItem::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // required int32 id = 1;
   if (has_id()) {
@@ -387,7 +386,7 @@ void TestMessage_MsgItem::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->itemvalue(), target);
   }
 
-  // optional .ProtobufTest.TestMessage.ItemType itemType = 4;
+  // optional .Econix.Transaction.ItemType itemType = 4;
   if (has_itemtype()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       4, this->itemtype(), target);
@@ -400,7 +399,7 @@ void TestMessage_MsgItem::SerializeWithCachedSizes(
   return target;
 }
 
-int TestMessage_MsgItem::ByteSize() const {
+int Transaction_MsgItem::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -425,7 +424,7 @@ int TestMessage_MsgItem::ByteSize() const {
           this->itemvalue());
     }
 
-    // optional .ProtobufTest.TestMessage.ItemType itemType = 4;
+    // optional .Econix.Transaction.ItemType itemType = 4;
     if (has_itemtype()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->itemtype());
@@ -443,10 +442,10 @@ int TestMessage_MsgItem::ByteSize() const {
   return total_size;
 }
 
-void TestMessage_MsgItem::MergeFrom(const ::google::protobuf::Message& from) {
+void Transaction_MsgItem::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const TestMessage_MsgItem* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const TestMessage_MsgItem*>(
+  const Transaction_MsgItem* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Transaction_MsgItem*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -455,7 +454,7 @@ void TestMessage_MsgItem::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void TestMessage_MsgItem::MergeFrom(const TestMessage_MsgItem& from) {
+void Transaction_MsgItem::MergeFrom(const Transaction_MsgItem& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_id()) {
@@ -474,25 +473,25 @@ void TestMessage_MsgItem::MergeFrom(const TestMessage_MsgItem& from) {
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void TestMessage_MsgItem::CopyFrom(const ::google::protobuf::Message& from) {
+void Transaction_MsgItem::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void TestMessage_MsgItem::CopyFrom(const TestMessage_MsgItem& from) {
+void Transaction_MsgItem::CopyFrom(const Transaction_MsgItem& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool TestMessage_MsgItem::IsInitialized() const {
+bool Transaction_MsgItem::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
 
   return true;
 }
 
-void TestMessage_MsgItem::Swap(TestMessage_MsgItem* other) {
+void Transaction_MsgItem::Swap(Transaction_MsgItem* other) {
   if (other != this) {
     std::swap(id_, other->id_);
     std::swap(itemname_, other->itemname_);
@@ -504,40 +503,40 @@ void TestMessage_MsgItem::Swap(TestMessage_MsgItem* other) {
   }
 }
 
-::google::protobuf::Metadata TestMessage_MsgItem::GetMetadata() const {
+::google::protobuf::Metadata Transaction_MsgItem::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = TestMessage_MsgItem_descriptor_;
-  metadata.reflection = TestMessage_MsgItem_reflection_;
+  metadata.descriptor = Transaction_MsgItem_descriptor_;
+  metadata.reflection = Transaction_MsgItem_reflection_;
   return metadata;
 }
 
 
 // -------------------------------------------------------------------
 
-::std::string* TestMessage::_default_description_ = NULL;
+::std::string* Transaction::_default_description_ = NULL;
 #ifndef _MSC_VER
-const int TestMessage::kClientNameFieldNumber;
-const int TestMessage::kClientIdFieldNumber;
-const int TestMessage::kDescriptionFieldNumber;
-const int TestMessage::kMessageitemsFieldNumber;
+const int Transaction::kClientNameFieldNumber;
+const int Transaction::kClientIdFieldNumber;
+const int Transaction::kDescriptionFieldNumber;
+const int Transaction::kMessageitemsFieldNumber;
 #endif  // !_MSC_VER
 
-TestMessage::TestMessage()
+Transaction::Transaction()
   : ::google::protobuf::Message() {
   SharedCtor();
 }
 
-void TestMessage::InitAsDefaultInstance() {
+void Transaction::InitAsDefaultInstance() {
 }
 
-TestMessage::TestMessage(const TestMessage& from)
+Transaction::Transaction(const Transaction& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
 }
 
-void TestMessage::SharedCtor() {
+void Transaction::SharedCtor() {
   _cached_size_ = 0;
   clientname_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   clientid_ = 0;
@@ -545,11 +544,11 @@ void TestMessage::SharedCtor() {
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-TestMessage::~TestMessage() {
+Transaction::~Transaction() {
   SharedDtor();
 }
 
-void TestMessage::SharedDtor() {
+void Transaction::SharedDtor() {
   if (clientname_ != &::google::protobuf::internal::kEmptyString) {
     delete clientname_;
   }
@@ -560,28 +559,28 @@ void TestMessage::SharedDtor() {
   }
 }
 
-void TestMessage::SetCachedSize(int size) const {
+void Transaction::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* TestMessage::descriptor() {
+const ::google::protobuf::Descriptor* Transaction::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return TestMessage_descriptor_;
+  return Transaction_descriptor_;
 }
 
-const TestMessage& TestMessage::default_instance() {
+const Transaction& Transaction::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_a_2eproto();
   return *default_instance_;
 }
 
-TestMessage* TestMessage::default_instance_ = NULL;
+Transaction* Transaction::default_instance_ = NULL;
 
-TestMessage* TestMessage::New() const {
-  return new TestMessage;
+Transaction* Transaction::New() const {
+  return new Transaction;
 }
 
-void TestMessage::Clear() {
+void Transaction::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (has_clientname()) {
       if (clientname_ != &::google::protobuf::internal::kEmptyString) {
@@ -600,7 +599,7 @@ void TestMessage::Clear() {
   mutable_unknown_fields()->Clear();
 }
 
-bool TestMessage::MergePartialFromCodedStream(
+bool Transaction::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
   ::google::protobuf::uint32 tag;
@@ -655,7 +654,7 @@ bool TestMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .ProtobufTest.TestMessage.MsgItem messageitems = 4;
+      // repeated .Econix.Transaction.MsgItem messageitems = 4;
       case 4: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
@@ -686,7 +685,7 @@ bool TestMessage::MergePartialFromCodedStream(
 #undef DO_
 }
 
-void TestMessage::SerializeWithCachedSizes(
+void Transaction::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // required string clientName = 1;
   if (has_clientname()) {
@@ -711,7 +710,7 @@ void TestMessage::SerializeWithCachedSizes(
       3, this->description(), output);
   }
 
-  // repeated .ProtobufTest.TestMessage.MsgItem messageitems = 4;
+  // repeated .Econix.Transaction.MsgItem messageitems = 4;
   for (int i = 0; i < this->messageitems_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, this->messageitems(i), output);
@@ -723,7 +722,7 @@ void TestMessage::SerializeWithCachedSizes(
   }
 }
 
-::google::protobuf::uint8* TestMessage::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* Transaction::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // required string clientName = 1;
   if (has_clientname()) {
@@ -750,7 +749,7 @@ void TestMessage::SerializeWithCachedSizes(
         3, this->description(), target);
   }
 
-  // repeated .ProtobufTest.TestMessage.MsgItem messageitems = 4;
+  // repeated .Econix.Transaction.MsgItem messageitems = 4;
   for (int i = 0; i < this->messageitems_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
@@ -764,7 +763,7 @@ void TestMessage::SerializeWithCachedSizes(
   return target;
 }
 
-int TestMessage::ByteSize() const {
+int Transaction::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -790,7 +789,7 @@ int TestMessage::ByteSize() const {
     }
 
   }
-  // repeated .ProtobufTest.TestMessage.MsgItem messageitems = 4;
+  // repeated .Econix.Transaction.MsgItem messageitems = 4;
   total_size += 1 * this->messageitems_size();
   for (int i = 0; i < this->messageitems_size(); i++) {
     total_size +=
@@ -809,10 +808,10 @@ int TestMessage::ByteSize() const {
   return total_size;
 }
 
-void TestMessage::MergeFrom(const ::google::protobuf::Message& from) {
+void Transaction::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const TestMessage* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const TestMessage*>(
+  const Transaction* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Transaction*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -821,7 +820,7 @@ void TestMessage::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void TestMessage::MergeFrom(const TestMessage& from) {
+void Transaction::MergeFrom(const Transaction& from) {
   GOOGLE_CHECK_NE(&from, this);
   messageitems_.MergeFrom(from.messageitems_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -838,19 +837,19 @@ void TestMessage::MergeFrom(const TestMessage& from) {
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void TestMessage::CopyFrom(const ::google::protobuf::Message& from) {
+void Transaction::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void TestMessage::CopyFrom(const TestMessage& from) {
+void Transaction::CopyFrom(const Transaction& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool TestMessage::IsInitialized() const {
+bool Transaction::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
 
   for (int i = 0; i < messageitems_size(); i++) {
@@ -859,7 +858,7 @@ bool TestMessage::IsInitialized() const {
   return true;
 }
 
-void TestMessage::Swap(TestMessage* other) {
+void Transaction::Swap(Transaction* other) {
   if (other != this) {
     std::swap(clientname_, other->clientname_);
     std::swap(clientid_, other->clientid_);
@@ -871,17 +870,17 @@ void TestMessage::Swap(TestMessage* other) {
   }
 }
 
-::google::protobuf::Metadata TestMessage::GetMetadata() const {
+::google::protobuf::Metadata Transaction::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = TestMessage_descriptor_;
-  metadata.reflection = TestMessage_reflection_;
+  metadata.descriptor = Transaction_descriptor_;
+  metadata.reflection = Transaction_reflection_;
   return metadata;
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace ProtobufTest
+}  // namespace Econix
 
 // @@protoc_insertion_point(global_scope)

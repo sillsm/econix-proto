@@ -27,47 +27,47 @@
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
-namespace ProtobufTest {
+namespace Econix {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_a_2eproto();
 void protobuf_AssignDesc_a_2eproto();
 void protobuf_ShutdownFile_a_2eproto();
 
-class TestMessage;
-class TestMessage_MsgItem;
+class Transaction;
+class Transaction_MsgItem;
 
-enum TestMessage_ItemType {
-  TestMessage_ItemType_TypeX = 0,
-  TestMessage_ItemType_TypeY = 1,
-  TestMessage_ItemType_TypeZ = 2,
-  TestMessage_ItemType_TypeA = 3
+enum Transaction_ItemType {
+  Transaction_ItemType_TypeX = 0,
+  Transaction_ItemType_TypeY = 1,
+  Transaction_ItemType_TypeZ = 2,
+  Transaction_ItemType_TypeA = 3
 };
-bool TestMessage_ItemType_IsValid(int value);
-const TestMessage_ItemType TestMessage_ItemType_ItemType_MIN = TestMessage_ItemType_TypeX;
-const TestMessage_ItemType TestMessage_ItemType_ItemType_MAX = TestMessage_ItemType_TypeA;
-const int TestMessage_ItemType_ItemType_ARRAYSIZE = TestMessage_ItemType_ItemType_MAX + 1;
+bool Transaction_ItemType_IsValid(int value);
+const Transaction_ItemType Transaction_ItemType_ItemType_MIN = Transaction_ItemType_TypeX;
+const Transaction_ItemType Transaction_ItemType_ItemType_MAX = Transaction_ItemType_TypeA;
+const int Transaction_ItemType_ItemType_ARRAYSIZE = Transaction_ItemType_ItemType_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* TestMessage_ItemType_descriptor();
-inline const ::std::string& TestMessage_ItemType_Name(TestMessage_ItemType value) {
+const ::google::protobuf::EnumDescriptor* Transaction_ItemType_descriptor();
+inline const ::std::string& Transaction_ItemType_Name(Transaction_ItemType value) {
   return ::google::protobuf::internal::NameOfEnum(
-    TestMessage_ItemType_descriptor(), value);
+    Transaction_ItemType_descriptor(), value);
 }
-inline bool TestMessage_ItemType_Parse(
-    const ::std::string& name, TestMessage_ItemType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TestMessage_ItemType>(
-    TestMessage_ItemType_descriptor(), name, value);
+inline bool Transaction_ItemType_Parse(
+    const ::std::string& name, Transaction_ItemType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Transaction_ItemType>(
+    Transaction_ItemType_descriptor(), name, value);
 }
 // ===================================================================
 
-class TestMessage_MsgItem : public ::google::protobuf::Message {
+class Transaction_MsgItem : public ::google::protobuf::Message {
  public:
-  TestMessage_MsgItem();
-  virtual ~TestMessage_MsgItem();
+  Transaction_MsgItem();
+  virtual ~Transaction_MsgItem();
 
-  TestMessage_MsgItem(const TestMessage_MsgItem& from);
+  Transaction_MsgItem(const Transaction_MsgItem& from);
 
-  inline TestMessage_MsgItem& operator=(const TestMessage_MsgItem& from) {
+  inline Transaction_MsgItem& operator=(const Transaction_MsgItem& from) {
     CopyFrom(from);
     return *this;
   }
@@ -81,17 +81,17 @@ class TestMessage_MsgItem : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const TestMessage_MsgItem& default_instance();
+  static const Transaction_MsgItem& default_instance();
 
-  void Swap(TestMessage_MsgItem* other);
+  void Swap(Transaction_MsgItem* other);
 
   // implements Message ----------------------------------------------
 
-  TestMessage_MsgItem* New() const;
+  Transaction_MsgItem* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const TestMessage_MsgItem& from);
-  void MergeFrom(const TestMessage_MsgItem& from);
+  void CopyFrom(const Transaction_MsgItem& from);
+  void MergeFrom(const Transaction_MsgItem& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -140,14 +140,14 @@ class TestMessage_MsgItem : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 itemvalue() const;
   inline void set_itemvalue(::google::protobuf::int32 value);
 
-  // optional .ProtobufTest.TestMessage.ItemType itemType = 4;
+  // optional .Econix.Transaction.ItemType itemType = 4;
   inline bool has_itemtype() const;
   inline void clear_itemtype();
   static const int kItemTypeFieldNumber = 4;
-  inline ::ProtobufTest::TestMessage_ItemType itemtype() const;
-  inline void set_itemtype(::ProtobufTest::TestMessage_ItemType value);
+  inline ::Econix::Transaction_ItemType itemtype() const;
+  inline void set_itemtype(::Econix::Transaction_ItemType value);
 
-  // @@protoc_insertion_point(class_scope:ProtobufTest.TestMessage.MsgItem)
+  // @@protoc_insertion_point(class_scope:Econix.Transaction.MsgItem)
  private:
   inline void set_has_id();
   inline void clear_has_id();
@@ -173,18 +173,18 @@ class TestMessage_MsgItem : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_a_2eproto();
 
   void InitAsDefaultInstance();
-  static TestMessage_MsgItem* default_instance_;
+  static Transaction_MsgItem* default_instance_;
 };
 // -------------------------------------------------------------------
 
-class TestMessage : public ::google::protobuf::Message {
+class Transaction : public ::google::protobuf::Message {
  public:
-  TestMessage();
-  virtual ~TestMessage();
+  Transaction();
+  virtual ~Transaction();
 
-  TestMessage(const TestMessage& from);
+  Transaction(const Transaction& from);
 
-  inline TestMessage& operator=(const TestMessage& from) {
+  inline Transaction& operator=(const Transaction& from) {
     CopyFrom(from);
     return *this;
   }
@@ -198,17 +198,17 @@ class TestMessage : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const TestMessage& default_instance();
+  static const Transaction& default_instance();
 
-  void Swap(TestMessage* other);
+  void Swap(Transaction* other);
 
   // implements Message ----------------------------------------------
 
-  TestMessage* New() const;
+  Transaction* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const TestMessage& from);
-  void MergeFrom(const TestMessage& from);
+  void CopyFrom(const Transaction& from);
+  void MergeFrom(const Transaction& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -229,32 +229,32 @@ class TestMessage : public ::google::protobuf::Message {
 
   // nested types ----------------------------------------------------
 
-  typedef TestMessage_MsgItem MsgItem;
+  typedef Transaction_MsgItem MsgItem;
 
-  typedef TestMessage_ItemType ItemType;
-  static const ItemType TypeX = TestMessage_ItemType_TypeX;
-  static const ItemType TypeY = TestMessage_ItemType_TypeY;
-  static const ItemType TypeZ = TestMessage_ItemType_TypeZ;
-  static const ItemType TypeA = TestMessage_ItemType_TypeA;
+  typedef Transaction_ItemType ItemType;
+  static const ItemType TypeX = Transaction_ItemType_TypeX;
+  static const ItemType TypeY = Transaction_ItemType_TypeY;
+  static const ItemType TypeZ = Transaction_ItemType_TypeZ;
+  static const ItemType TypeA = Transaction_ItemType_TypeA;
   static inline bool ItemType_IsValid(int value) {
-    return TestMessage_ItemType_IsValid(value);
+    return Transaction_ItemType_IsValid(value);
   }
   static const ItemType ItemType_MIN =
-    TestMessage_ItemType_ItemType_MIN;
+    Transaction_ItemType_ItemType_MIN;
   static const ItemType ItemType_MAX =
-    TestMessage_ItemType_ItemType_MAX;
+    Transaction_ItemType_ItemType_MAX;
   static const int ItemType_ARRAYSIZE =
-    TestMessage_ItemType_ItemType_ARRAYSIZE;
+    Transaction_ItemType_ItemType_ARRAYSIZE;
   static inline const ::google::protobuf::EnumDescriptor*
   ItemType_descriptor() {
-    return TestMessage_ItemType_descriptor();
+    return Transaction_ItemType_descriptor();
   }
   static inline const ::std::string& ItemType_Name(ItemType value) {
-    return TestMessage_ItemType_Name(value);
+    return Transaction_ItemType_Name(value);
   }
   static inline bool ItemType_Parse(const ::std::string& name,
       ItemType* value) {
-    return TestMessage_ItemType_Parse(name, value);
+    return Transaction_ItemType_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
@@ -290,19 +290,19 @@ class TestMessage : public ::google::protobuf::Message {
   inline ::std::string* release_description();
   inline void set_allocated_description(::std::string* description);
 
-  // repeated .ProtobufTest.TestMessage.MsgItem messageitems = 4;
+  // repeated .Econix.Transaction.MsgItem messageitems = 4;
   inline int messageitems_size() const;
   inline void clear_messageitems();
   static const int kMessageitemsFieldNumber = 4;
-  inline const ::ProtobufTest::TestMessage_MsgItem& messageitems(int index) const;
-  inline ::ProtobufTest::TestMessage_MsgItem* mutable_messageitems(int index);
-  inline ::ProtobufTest::TestMessage_MsgItem* add_messageitems();
-  inline const ::google::protobuf::RepeatedPtrField< ::ProtobufTest::TestMessage_MsgItem >&
+  inline const ::Econix::Transaction_MsgItem& messageitems(int index) const;
+  inline ::Econix::Transaction_MsgItem* mutable_messageitems(int index);
+  inline ::Econix::Transaction_MsgItem* add_messageitems();
+  inline const ::google::protobuf::RepeatedPtrField< ::Econix::Transaction_MsgItem >&
       messageitems() const;
-  inline ::google::protobuf::RepeatedPtrField< ::ProtobufTest::TestMessage_MsgItem >*
+  inline ::google::protobuf::RepeatedPtrField< ::Econix::Transaction_MsgItem >*
       mutable_messageitems();
 
-  // @@protoc_insertion_point(class_scope:ProtobufTest.TestMessage)
+  // @@protoc_insertion_point(class_scope:Econix.Transaction)
  private:
   inline void set_has_clientname();
   inline void clear_has_clientname();
@@ -316,7 +316,7 @@ class TestMessage : public ::google::protobuf::Message {
   ::std::string* clientname_;
   ::std::string* description_;
   static ::std::string* _default_description_;
-  ::google::protobuf::RepeatedPtrField< ::ProtobufTest::TestMessage_MsgItem > messageitems_;
+  ::google::protobuf::RepeatedPtrField< ::Econix::Transaction_MsgItem > messageitems_;
   ::google::protobuf::int32 clientid_;
 
   mutable int _cached_size_;
@@ -327,85 +327,85 @@ class TestMessage : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_a_2eproto();
 
   void InitAsDefaultInstance();
-  static TestMessage* default_instance_;
+  static Transaction* default_instance_;
 };
 // ===================================================================
 
 
 // ===================================================================
 
-// TestMessage_MsgItem
+// Transaction_MsgItem
 
 // required int32 id = 1;
-inline bool TestMessage_MsgItem::has_id() const {
+inline bool Transaction_MsgItem::has_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void TestMessage_MsgItem::set_has_id() {
+inline void Transaction_MsgItem::set_has_id() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void TestMessage_MsgItem::clear_has_id() {
+inline void Transaction_MsgItem::clear_has_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void TestMessage_MsgItem::clear_id() {
+inline void Transaction_MsgItem::clear_id() {
   id_ = 0;
   clear_has_id();
 }
-inline ::google::protobuf::int32 TestMessage_MsgItem::id() const {
+inline ::google::protobuf::int32 Transaction_MsgItem::id() const {
   return id_;
 }
-inline void TestMessage_MsgItem::set_id(::google::protobuf::int32 value) {
+inline void Transaction_MsgItem::set_id(::google::protobuf::int32 value) {
   set_has_id();
   id_ = value;
 }
 
 // optional string itemName = 2;
-inline bool TestMessage_MsgItem::has_itemname() const {
+inline bool Transaction_MsgItem::has_itemname() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void TestMessage_MsgItem::set_has_itemname() {
+inline void Transaction_MsgItem::set_has_itemname() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void TestMessage_MsgItem::clear_has_itemname() {
+inline void Transaction_MsgItem::clear_has_itemname() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void TestMessage_MsgItem::clear_itemname() {
+inline void Transaction_MsgItem::clear_itemname() {
   if (itemname_ != &::google::protobuf::internal::kEmptyString) {
     itemname_->clear();
   }
   clear_has_itemname();
 }
-inline const ::std::string& TestMessage_MsgItem::itemname() const {
+inline const ::std::string& Transaction_MsgItem::itemname() const {
   return *itemname_;
 }
-inline void TestMessage_MsgItem::set_itemname(const ::std::string& value) {
+inline void Transaction_MsgItem::set_itemname(const ::std::string& value) {
   set_has_itemname();
   if (itemname_ == &::google::protobuf::internal::kEmptyString) {
     itemname_ = new ::std::string;
   }
   itemname_->assign(value);
 }
-inline void TestMessage_MsgItem::set_itemname(const char* value) {
+inline void Transaction_MsgItem::set_itemname(const char* value) {
   set_has_itemname();
   if (itemname_ == &::google::protobuf::internal::kEmptyString) {
     itemname_ = new ::std::string;
   }
   itemname_->assign(value);
 }
-inline void TestMessage_MsgItem::set_itemname(const char* value, size_t size) {
+inline void Transaction_MsgItem::set_itemname(const char* value, size_t size) {
   set_has_itemname();
   if (itemname_ == &::google::protobuf::internal::kEmptyString) {
     itemname_ = new ::std::string;
   }
   itemname_->assign(reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* TestMessage_MsgItem::mutable_itemname() {
+inline ::std::string* Transaction_MsgItem::mutable_itemname() {
   set_has_itemname();
   if (itemname_ == &::google::protobuf::internal::kEmptyString) {
     itemname_ = new ::std::string;
   }
   return itemname_;
 }
-inline ::std::string* TestMessage_MsgItem::release_itemname() {
+inline ::std::string* Transaction_MsgItem::release_itemname() {
   clear_has_itemname();
   if (itemname_ == &::google::protobuf::internal::kEmptyString) {
     return NULL;
@@ -415,7 +415,7 @@ inline ::std::string* TestMessage_MsgItem::release_itemname() {
     return temp;
   }
 }
-inline void TestMessage_MsgItem::set_allocated_itemname(::std::string* itemname) {
+inline void Transaction_MsgItem::set_allocated_itemname(::std::string* itemname) {
   if (itemname_ != &::google::protobuf::internal::kEmptyString) {
     delete itemname_;
   }
@@ -429,102 +429,102 @@ inline void TestMessage_MsgItem::set_allocated_itemname(::std::string* itemname)
 }
 
 // optional int32 itemValue = 3;
-inline bool TestMessage_MsgItem::has_itemvalue() const {
+inline bool Transaction_MsgItem::has_itemvalue() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void TestMessage_MsgItem::set_has_itemvalue() {
+inline void Transaction_MsgItem::set_has_itemvalue() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void TestMessage_MsgItem::clear_has_itemvalue() {
+inline void Transaction_MsgItem::clear_has_itemvalue() {
   _has_bits_[0] &= ~0x00000004u;
 }
-inline void TestMessage_MsgItem::clear_itemvalue() {
+inline void Transaction_MsgItem::clear_itemvalue() {
   itemvalue_ = 0;
   clear_has_itemvalue();
 }
-inline ::google::protobuf::int32 TestMessage_MsgItem::itemvalue() const {
+inline ::google::protobuf::int32 Transaction_MsgItem::itemvalue() const {
   return itemvalue_;
 }
-inline void TestMessage_MsgItem::set_itemvalue(::google::protobuf::int32 value) {
+inline void Transaction_MsgItem::set_itemvalue(::google::protobuf::int32 value) {
   set_has_itemvalue();
   itemvalue_ = value;
 }
 
-// optional .ProtobufTest.TestMessage.ItemType itemType = 4;
-inline bool TestMessage_MsgItem::has_itemtype() const {
+// optional .Econix.Transaction.ItemType itemType = 4;
+inline bool Transaction_MsgItem::has_itemtype() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void TestMessage_MsgItem::set_has_itemtype() {
+inline void Transaction_MsgItem::set_has_itemtype() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void TestMessage_MsgItem::clear_has_itemtype() {
+inline void Transaction_MsgItem::clear_has_itemtype() {
   _has_bits_[0] &= ~0x00000008u;
 }
-inline void TestMessage_MsgItem::clear_itemtype() {
+inline void Transaction_MsgItem::clear_itemtype() {
   itemtype_ = 0;
   clear_has_itemtype();
 }
-inline ::ProtobufTest::TestMessage_ItemType TestMessage_MsgItem::itemtype() const {
-  return static_cast< ::ProtobufTest::TestMessage_ItemType >(itemtype_);
+inline ::Econix::Transaction_ItemType Transaction_MsgItem::itemtype() const {
+  return static_cast< ::Econix::Transaction_ItemType >(itemtype_);
 }
-inline void TestMessage_MsgItem::set_itemtype(::ProtobufTest::TestMessage_ItemType value) {
-  assert(::ProtobufTest::TestMessage_ItemType_IsValid(value));
+inline void Transaction_MsgItem::set_itemtype(::Econix::Transaction_ItemType value) {
+  assert(::Econix::Transaction_ItemType_IsValid(value));
   set_has_itemtype();
   itemtype_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// TestMessage
+// Transaction
 
 // required string clientName = 1;
-inline bool TestMessage::has_clientname() const {
+inline bool Transaction::has_clientname() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void TestMessage::set_has_clientname() {
+inline void Transaction::set_has_clientname() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void TestMessage::clear_has_clientname() {
+inline void Transaction::clear_has_clientname() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void TestMessage::clear_clientname() {
+inline void Transaction::clear_clientname() {
   if (clientname_ != &::google::protobuf::internal::kEmptyString) {
     clientname_->clear();
   }
   clear_has_clientname();
 }
-inline const ::std::string& TestMessage::clientname() const {
+inline const ::std::string& Transaction::clientname() const {
   return *clientname_;
 }
-inline void TestMessage::set_clientname(const ::std::string& value) {
+inline void Transaction::set_clientname(const ::std::string& value) {
   set_has_clientname();
   if (clientname_ == &::google::protobuf::internal::kEmptyString) {
     clientname_ = new ::std::string;
   }
   clientname_->assign(value);
 }
-inline void TestMessage::set_clientname(const char* value) {
+inline void Transaction::set_clientname(const char* value) {
   set_has_clientname();
   if (clientname_ == &::google::protobuf::internal::kEmptyString) {
     clientname_ = new ::std::string;
   }
   clientname_->assign(value);
 }
-inline void TestMessage::set_clientname(const char* value, size_t size) {
+inline void Transaction::set_clientname(const char* value, size_t size) {
   set_has_clientname();
   if (clientname_ == &::google::protobuf::internal::kEmptyString) {
     clientname_ = new ::std::string;
   }
   clientname_->assign(reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* TestMessage::mutable_clientname() {
+inline ::std::string* Transaction::mutable_clientname() {
   set_has_clientname();
   if (clientname_ == &::google::protobuf::internal::kEmptyString) {
     clientname_ = new ::std::string;
   }
   return clientname_;
 }
-inline ::std::string* TestMessage::release_clientname() {
+inline ::std::string* Transaction::release_clientname() {
   clear_has_clientname();
   if (clientname_ == &::google::protobuf::internal::kEmptyString) {
     return NULL;
@@ -534,7 +534,7 @@ inline ::std::string* TestMessage::release_clientname() {
     return temp;
   }
 }
-inline void TestMessage::set_allocated_clientname(::std::string* clientname) {
+inline void Transaction::set_allocated_clientname(::std::string* clientname) {
   if (clientname_ != &::google::protobuf::internal::kEmptyString) {
     delete clientname_;
   }
@@ -548,75 +548,75 @@ inline void TestMessage::set_allocated_clientname(::std::string* clientname) {
 }
 
 // required int32 clientId = 2;
-inline bool TestMessage::has_clientid() const {
+inline bool Transaction::has_clientid() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void TestMessage::set_has_clientid() {
+inline void Transaction::set_has_clientid() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void TestMessage::clear_has_clientid() {
+inline void Transaction::clear_has_clientid() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void TestMessage::clear_clientid() {
+inline void Transaction::clear_clientid() {
   clientid_ = 0;
   clear_has_clientid();
 }
-inline ::google::protobuf::int32 TestMessage::clientid() const {
+inline ::google::protobuf::int32 Transaction::clientid() const {
   return clientid_;
 }
-inline void TestMessage::set_clientid(::google::protobuf::int32 value) {
+inline void Transaction::set_clientid(::google::protobuf::int32 value) {
   set_has_clientid();
   clientid_ = value;
 }
 
 // optional string description = 3 [default = "NONE"];
-inline bool TestMessage::has_description() const {
+inline bool Transaction::has_description() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void TestMessage::set_has_description() {
+inline void Transaction::set_has_description() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void TestMessage::clear_has_description() {
+inline void Transaction::clear_has_description() {
   _has_bits_[0] &= ~0x00000004u;
 }
-inline void TestMessage::clear_description() {
+inline void Transaction::clear_description() {
   if (description_ != _default_description_) {
     description_->assign(*_default_description_);
   }
   clear_has_description();
 }
-inline const ::std::string& TestMessage::description() const {
+inline const ::std::string& Transaction::description() const {
   return *description_;
 }
-inline void TestMessage::set_description(const ::std::string& value) {
+inline void Transaction::set_description(const ::std::string& value) {
   set_has_description();
   if (description_ == _default_description_) {
     description_ = new ::std::string;
   }
   description_->assign(value);
 }
-inline void TestMessage::set_description(const char* value) {
+inline void Transaction::set_description(const char* value) {
   set_has_description();
   if (description_ == _default_description_) {
     description_ = new ::std::string;
   }
   description_->assign(value);
 }
-inline void TestMessage::set_description(const char* value, size_t size) {
+inline void Transaction::set_description(const char* value, size_t size) {
   set_has_description();
   if (description_ == _default_description_) {
     description_ = new ::std::string;
   }
   description_->assign(reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* TestMessage::mutable_description() {
+inline ::std::string* Transaction::mutable_description() {
   set_has_description();
   if (description_ == _default_description_) {
     description_ = new ::std::string(*_default_description_);
   }
   return description_;
 }
-inline ::std::string* TestMessage::release_description() {
+inline ::std::string* Transaction::release_description() {
   clear_has_description();
   if (description_ == _default_description_) {
     return NULL;
@@ -626,7 +626,7 @@ inline ::std::string* TestMessage::release_description() {
     return temp;
   }
 }
-inline void TestMessage::set_allocated_description(::std::string* description) {
+inline void Transaction::set_allocated_description(::std::string* description) {
   if (description_ != _default_description_) {
     delete description_;
   }
@@ -639,43 +639,43 @@ inline void TestMessage::set_allocated_description(::std::string* description) {
   }
 }
 
-// repeated .ProtobufTest.TestMessage.MsgItem messageitems = 4;
-inline int TestMessage::messageitems_size() const {
+// repeated .Econix.Transaction.MsgItem messageitems = 4;
+inline int Transaction::messageitems_size() const {
   return messageitems_.size();
 }
-inline void TestMessage::clear_messageitems() {
+inline void Transaction::clear_messageitems() {
   messageitems_.Clear();
 }
-inline const ::ProtobufTest::TestMessage_MsgItem& TestMessage::messageitems(int index) const {
+inline const ::Econix::Transaction_MsgItem& Transaction::messageitems(int index) const {
   return messageitems_.Get(index);
 }
-inline ::ProtobufTest::TestMessage_MsgItem* TestMessage::mutable_messageitems(int index) {
+inline ::Econix::Transaction_MsgItem* Transaction::mutable_messageitems(int index) {
   return messageitems_.Mutable(index);
 }
-inline ::ProtobufTest::TestMessage_MsgItem* TestMessage::add_messageitems() {
+inline ::Econix::Transaction_MsgItem* Transaction::add_messageitems() {
   return messageitems_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::ProtobufTest::TestMessage_MsgItem >&
-TestMessage::messageitems() const {
+inline const ::google::protobuf::RepeatedPtrField< ::Econix::Transaction_MsgItem >&
+Transaction::messageitems() const {
   return messageitems_;
 }
-inline ::google::protobuf::RepeatedPtrField< ::ProtobufTest::TestMessage_MsgItem >*
-TestMessage::mutable_messageitems() {
+inline ::google::protobuf::RepeatedPtrField< ::Econix::Transaction_MsgItem >*
+Transaction::mutable_messageitems() {
   return &messageitems_;
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace ProtobufTest
+}  // namespace Econix
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ProtobufTest::TestMessage_ItemType>() {
-  return ::ProtobufTest::TestMessage_ItemType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::Econix::Transaction_ItemType>() {
+  return ::Econix::Transaction_ItemType_descriptor();
 }
 
 }  // namespace google

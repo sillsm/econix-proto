@@ -3,15 +3,15 @@
 // DO NOT EDIT!
 
 /*
-Package ProtobufTest is a generated protocol buffer package.
+Package Econix is a generated protocol buffer package.
 
 It is generated from these files:
 	a.proto
 
 It has these top-level messages:
-	TestMessage
+	Transaction
 */
-package ProtobufTest
+package Econix
 
 import proto "github.com/golang/protobuf/proto"
 import math "math"
@@ -20,127 +20,127 @@ import math "math"
 var _ = proto.Marshal
 var _ = math.Inf
 
-type TestMessage_ItemType int32
+type Transaction_ItemType int32
 
 const (
-	TestMessage_TypeX TestMessage_ItemType = 0
-	TestMessage_TypeY TestMessage_ItemType = 1
-	TestMessage_TypeZ TestMessage_ItemType = 2
-	TestMessage_TypeA TestMessage_ItemType = 3
+	Transaction_TypeX Transaction_ItemType = 0
+	Transaction_TypeY Transaction_ItemType = 1
+	Transaction_TypeZ Transaction_ItemType = 2
+	Transaction_TypeA Transaction_ItemType = 3
 )
 
-var TestMessage_ItemType_name = map[int32]string{
+var Transaction_ItemType_name = map[int32]string{
 	0: "TypeX",
 	1: "TypeY",
 	2: "TypeZ",
 	3: "TypeA",
 }
-var TestMessage_ItemType_value = map[string]int32{
+var Transaction_ItemType_value = map[string]int32{
 	"TypeX": 0,
 	"TypeY": 1,
 	"TypeZ": 2,
 	"TypeA": 3,
 }
 
-func (x TestMessage_ItemType) Enum() *TestMessage_ItemType {
-	p := new(TestMessage_ItemType)
+func (x Transaction_ItemType) Enum() *Transaction_ItemType {
+	p := new(Transaction_ItemType)
 	*p = x
 	return p
 }
-func (x TestMessage_ItemType) String() string {
-	return proto.EnumName(TestMessage_ItemType_name, int32(x))
+func (x Transaction_ItemType) String() string {
+	return proto.EnumName(Transaction_ItemType_name, int32(x))
 }
-func (x *TestMessage_ItemType) UnmarshalJSON(data []byte) error {
-	value, err := proto.UnmarshalJSONEnum(TestMessage_ItemType_value, data, "TestMessage_ItemType")
+func (x *Transaction_ItemType) UnmarshalJSON(data []byte) error {
+	value, err := proto.UnmarshalJSONEnum(Transaction_ItemType_value, data, "Transaction_ItemType")
 	if err != nil {
 		return err
 	}
-	*x = TestMessage_ItemType(value)
+	*x = Transaction_ItemType(value)
 	return nil
 }
 
-type TestMessage struct {
+type Transaction struct {
 	ClientName       *string                `protobuf:"bytes,1,req,name=clientName" json:"clientName,omitempty"`
 	ClientId         *int32                 `protobuf:"varint,2,req,name=clientId" json:"clientId,omitempty"`
 	Description      *string                `protobuf:"bytes,3,opt,name=description,def=NONE" json:"description,omitempty"`
-	Messageitems     []*TestMessage_MsgItem `protobuf:"bytes,4,rep,name=messageitems" json:"messageitems,omitempty"`
+	Messageitems     []*Transaction_MsgItem `protobuf:"bytes,4,rep,name=messageitems" json:"messageitems,omitempty"`
 	XXX_unrecognized []byte                 `json:"-"`
 }
 
-func (m *TestMessage) Reset()         { *m = TestMessage{} }
-func (m *TestMessage) String() string { return proto.CompactTextString(m) }
-func (*TestMessage) ProtoMessage()    {}
+func (m *Transaction) Reset()         { *m = Transaction{} }
+func (m *Transaction) String() string { return proto.CompactTextString(m) }
+func (*Transaction) ProtoMessage()    {}
 
-const Default_TestMessage_Description string = "NONE"
+const Default_Transaction_Description string = "NONE"
 
-func (m *TestMessage) GetClientName() string {
+func (m *Transaction) GetClientName() string {
 	if m != nil && m.ClientName != nil {
 		return *m.ClientName
 	}
 	return ""
 }
 
-func (m *TestMessage) GetClientId() int32 {
+func (m *Transaction) GetClientId() int32 {
 	if m != nil && m.ClientId != nil {
 		return *m.ClientId
 	}
 	return 0
 }
 
-func (m *TestMessage) GetDescription() string {
+func (m *Transaction) GetDescription() string {
 	if m != nil && m.Description != nil {
 		return *m.Description
 	}
-	return Default_TestMessage_Description
+	return Default_Transaction_Description
 }
 
-func (m *TestMessage) GetMessageitems() []*TestMessage_MsgItem {
+func (m *Transaction) GetMessageitems() []*Transaction_MsgItem {
 	if m != nil {
 		return m.Messageitems
 	}
 	return nil
 }
 
-type TestMessage_MsgItem struct {
+type Transaction_MsgItem struct {
 	Id               *int32                `protobuf:"varint,1,req,name=id" json:"id,omitempty"`
 	ItemName         *string               `protobuf:"bytes,2,opt,name=itemName" json:"itemName,omitempty"`
 	ItemValue        *int32                `protobuf:"varint,3,opt,name=itemValue" json:"itemValue,omitempty"`
-	ItemType         *TestMessage_ItemType `protobuf:"varint,4,opt,name=itemType,enum=ProtobufTest.TestMessage_ItemType" json:"itemType,omitempty"`
+	ItemType         *Transaction_ItemType `protobuf:"varint,4,opt,name=itemType,enum=Econix.Transaction_ItemType" json:"itemType,omitempty"`
 	XXX_unrecognized []byte                `json:"-"`
 }
 
-func (m *TestMessage_MsgItem) Reset()         { *m = TestMessage_MsgItem{} }
-func (m *TestMessage_MsgItem) String() string { return proto.CompactTextString(m) }
-func (*TestMessage_MsgItem) ProtoMessage()    {}
+func (m *Transaction_MsgItem) Reset()         { *m = Transaction_MsgItem{} }
+func (m *Transaction_MsgItem) String() string { return proto.CompactTextString(m) }
+func (*Transaction_MsgItem) ProtoMessage()    {}
 
-func (m *TestMessage_MsgItem) GetId() int32 {
+func (m *Transaction_MsgItem) GetId() int32 {
 	if m != nil && m.Id != nil {
 		return *m.Id
 	}
 	return 0
 }
 
-func (m *TestMessage_MsgItem) GetItemName() string {
+func (m *Transaction_MsgItem) GetItemName() string {
 	if m != nil && m.ItemName != nil {
 		return *m.ItemName
 	}
 	return ""
 }
 
-func (m *TestMessage_MsgItem) GetItemValue() int32 {
+func (m *Transaction_MsgItem) GetItemValue() int32 {
 	if m != nil && m.ItemValue != nil {
 		return *m.ItemValue
 	}
 	return 0
 }
 
-func (m *TestMessage_MsgItem) GetItemType() TestMessage_ItemType {
+func (m *Transaction_MsgItem) GetItemType() Transaction_ItemType {
 	if m != nil && m.ItemType != nil {
 		return *m.ItemType
 	}
-	return TestMessage_TypeX
+	return Transaction_TypeX
 }
 
 func init() {
-	proto.RegisterEnum("ProtobufTest.TestMessage_ItemType", TestMessage_ItemType_name, TestMessage_ItemType_value)
+	proto.RegisterEnum("Econix.Transaction_ItemType", Transaction_ItemType_name, Transaction_ItemType_value)
 }
