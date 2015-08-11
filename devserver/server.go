@@ -1,7 +1,7 @@
 package main
 
 import (
-        "github.com/sillsm/econix-proto/compiled"
+        "github.com/sillsm/econix-proto/compiled/go"
 	"fmt"
 	"io"
 	"net/http"
@@ -53,6 +53,8 @@ func main() {
 	addAgent("a", 0)
 	addAgent("b", 1)
 	addAgent("bank", 50)
+        var e Econix.Transaction
+        e = e
 	http.HandleFunc("/view", hello)
 	http.ListenAndServe(":8080", nil)
 }
