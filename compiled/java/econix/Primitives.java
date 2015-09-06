@@ -787,15 +787,15 @@ public final class Primitives {
     com.google.protobuf.ByteString
         getIdBytes();
 
-    // optional bytes signature = 2;
+    // optional bytes body = 2;
     /**
-     * <code>optional bytes signature = 2;</code>
+     * <code>optional bytes body = 2;</code>
      */
-    boolean hasSignature();
+    boolean hasBody();
     /**
-     * <code>optional bytes signature = 2;</code>
+     * <code>optional bytes body = 2;</code>
      */
-    com.google.protobuf.ByteString getSignature();
+    com.google.protobuf.ByteString getBody();
   }
   /**
    * Protobuf type {@code econix.Signature}
@@ -855,7 +855,7 @@ public final class Primitives {
             }
             case 18: {
               bitField0_ |= 0x00000002;
-              signature_ = input.readBytes();
+              body_ = input.readBytes();
               break;
             }
           }
@@ -941,25 +941,25 @@ public final class Primitives {
       }
     }
 
-    // optional bytes signature = 2;
-    public static final int SIGNATURE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString signature_;
+    // optional bytes body = 2;
+    public static final int BODY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString body_;
     /**
-     * <code>optional bytes signature = 2;</code>
+     * <code>optional bytes body = 2;</code>
      */
-    public boolean hasSignature() {
+    public boolean hasBody() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional bytes signature = 2;</code>
+     * <code>optional bytes body = 2;</code>
      */
-    public com.google.protobuf.ByteString getSignature() {
-      return signature_;
+    public com.google.protobuf.ByteString getBody() {
+      return body_;
     }
 
     private void initFields() {
       id_ = "";
-      signature_ = com.google.protobuf.ByteString.EMPTY;
+      body_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -977,7 +977,7 @@ public final class Primitives {
         output.writeBytes(1, getIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, signature_);
+        output.writeBytes(2, body_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -994,7 +994,7 @@ public final class Primitives {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, signature_);
+          .computeBytesSize(2, body_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1114,7 +1114,7 @@ public final class Primitives {
         super.clear();
         id_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        signature_ = com.google.protobuf.ByteString.EMPTY;
+        body_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -1151,7 +1151,7 @@ public final class Primitives {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.signature_ = signature_;
+        result.body_ = body_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1173,8 +1173,8 @@ public final class Primitives {
           id_ = other.id_;
           onChanged();
         }
-        if (other.hasSignature()) {
-          setSignature(other.getSignature());
+        if (other.hasBody()) {
+          setBody(other.getBody());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1277,38 +1277,38 @@ public final class Primitives {
         return this;
       }
 
-      // optional bytes signature = 2;
-      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      // optional bytes body = 2;
+      private com.google.protobuf.ByteString body_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes signature = 2;</code>
+       * <code>optional bytes body = 2;</code>
        */
-      public boolean hasSignature() {
+      public boolean hasBody() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional bytes signature = 2;</code>
+       * <code>optional bytes body = 2;</code>
        */
-      public com.google.protobuf.ByteString getSignature() {
-        return signature_;
+      public com.google.protobuf.ByteString getBody() {
+        return body_;
       }
       /**
-       * <code>optional bytes signature = 2;</code>
+       * <code>optional bytes body = 2;</code>
        */
-      public Builder setSignature(com.google.protobuf.ByteString value) {
+      public Builder setBody(com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        signature_ = value;
+        body_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional bytes signature = 2;</code>
+       * <code>optional bytes body = 2;</code>
        */
-      public Builder clearSignature() {
+      public Builder clearBody() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        signature_ = getDefaultInstance().getSignature();
+        body_ = getDefaultInstance().getBody();
         onChanged();
         return this;
       }
@@ -1827,9 +1827,9 @@ public final class Primitives {
     java.lang.String[] descriptorData = {
       "\n\020primitives.proto\022\006econix\"B\n\013Transactio" +
       "n\022\014\n\004body\030\001 \001(\014\022%\n\nsignatures\030\002 \003(\0132\021.ec" +
-      "onix.Signature\"*\n\tSignature\022\n\n\002id\030\001 \001(\t\022" +
-      "\021\n\tsignature\030\002 \001(\014\"+\n\005Trade\022\020\n\010resource\030" +
-      "\001 \001(\004\022\020\n\010quantity\030\002 \001(\005"
+      "onix.Signature\"%\n\tSignature\022\n\n\002id\030\001 \001(\t\022" +
+      "\014\n\004body\030\002 \001(\014\"+\n\005Trade\022\020\n\010resource\030\001 \001(\004" +
+      "\022\020\n\010quantity\030\002 \001(\005"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1847,7 +1847,7 @@ public final class Primitives {
           internal_static_econix_Signature_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_econix_Signature_descriptor,
-              new java.lang.String[] { "Id", "Signature", });
+              new java.lang.String[] { "Id", "Body", });
           internal_static_econix_Trade_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_econix_Trade_fieldAccessorTable = new

@@ -58,7 +58,7 @@ void protobuf_AssignDesc_primitives_2eproto() {
   Signature_descriptor_ = file->message_type(1);
   static const int Signature_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Signature, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Signature, signature_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Signature, body_),
   };
   Signature_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -127,9 +127,9 @@ void protobuf_AddDesc_primitives_2eproto() {
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\020primitives.proto\022\006econix\"B\n\013Transactio"
     "n\022\014\n\004body\030\001 \001(\014\022%\n\nsignatures\030\002 \003(\0132\021.ec"
-    "onix.Signature\"*\n\tSignature\022\n\n\002id\030\001 \001(\t\022"
-    "\021\n\tsignature\030\002 \001(\014\"+\n\005Trade\022\020\n\010resource\030"
-    "\001 \001(\004\022\020\n\010quantity\030\002 \001(\005", 183);
+    "onix.Signature\"%\n\tSignature\022\n\n\002id\030\001 \001(\t\022"
+    "\014\n\004body\030\002 \001(\014\"+\n\005Trade\022\020\n\010resource\030\001 \001(\004"
+    "\022\020\n\010quantity\030\002 \001(\005", 178);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "primitives.proto", &protobuf_RegisterTypes);
   Transaction::default_instance_ = new Transaction();
@@ -408,7 +408,7 @@ void Transaction::Swap(Transaction* other) {
 
 #ifndef _MSC_VER
 const int Signature::kIdFieldNumber;
-const int Signature::kSignatureFieldNumber;
+const int Signature::kBodyFieldNumber;
 #endif  // !_MSC_VER
 
 Signature::Signature()
@@ -428,7 +428,7 @@ Signature::Signature(const Signature& from)
 void Signature::SharedCtor() {
   _cached_size_ = 0;
   id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  signature_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  body_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -440,8 +440,8 @@ void Signature::SharedDtor() {
   if (id_ != &::google::protobuf::internal::kEmptyString) {
     delete id_;
   }
-  if (signature_ != &::google::protobuf::internal::kEmptyString) {
-    delete signature_;
+  if (body_ != &::google::protobuf::internal::kEmptyString) {
+    delete body_;
   }
   if (this != default_instance_) {
   }
@@ -475,9 +475,9 @@ void Signature::Clear() {
         id_->clear();
       }
     }
-    if (has_signature()) {
-      if (signature_ != &::google::protobuf::internal::kEmptyString) {
-        signature_->clear();
+    if (has_body()) {
+      if (body_ != &::google::protobuf::internal::kEmptyString) {
+        body_->clear();
       }
     }
   }
@@ -503,17 +503,17 @@ bool Signature::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(18)) goto parse_signature;
+        if (input->ExpectTag(18)) goto parse_body;
         break;
       }
 
-      // optional bytes signature = 2;
+      // optional bytes body = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_signature:
+         parse_body:
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_signature()));
+                input, this->mutable_body()));
         } else {
           goto handle_uninterpreted;
         }
@@ -548,10 +548,10 @@ void Signature::SerializeWithCachedSizes(
       1, this->id(), output);
   }
 
-  // optional bytes signature = 2;
-  if (has_signature()) {
+  // optional bytes body = 2;
+  if (has_body()) {
     ::google::protobuf::internal::WireFormatLite::WriteBytes(
-      2, this->signature(), output);
+      2, this->body(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -572,11 +572,11 @@ void Signature::SerializeWithCachedSizes(
         1, this->id(), target);
   }
 
-  // optional bytes signature = 2;
-  if (has_signature()) {
+  // optional bytes body = 2;
+  if (has_body()) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->signature(), target);
+        2, this->body(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -597,11 +597,11 @@ int Signature::ByteSize() const {
           this->id());
     }
 
-    // optional bytes signature = 2;
-    if (has_signature()) {
+    // optional bytes body = 2;
+    if (has_body()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->signature());
+          this->body());
     }
 
   }
@@ -634,8 +634,8 @@ void Signature::MergeFrom(const Signature& from) {
     if (from.has_id()) {
       set_id(from.id());
     }
-    if (from.has_signature()) {
-      set_signature(from.signature());
+    if (from.has_body()) {
+      set_body(from.body());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -661,7 +661,7 @@ bool Signature::IsInitialized() const {
 void Signature::Swap(Signature* other) {
   if (other != this) {
     std::swap(id_, other->id_);
-    std::swap(signature_, other->signature_);
+    std::swap(body_, other->body_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

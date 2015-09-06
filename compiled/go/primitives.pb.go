@@ -48,7 +48,7 @@ func (m *Transaction) GetSignatures() []*Signature {
 
 type Signature struct {
 	Id               *string `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
-	Signature        []byte  `protobuf:"bytes,2,opt,name=signature" json:"signature,omitempty"`
+	Body             []byte  `protobuf:"bytes,2,opt,name=body" json:"body,omitempty"`
 	XXX_unrecognized []byte  `json:"-"`
 }
 
@@ -63,9 +63,9 @@ func (m *Signature) GetId() string {
 	return ""
 }
 
-func (m *Signature) GetSignature() []byte {
+func (m *Signature) GetBody() []byte {
 	if m != nil {
-		return m.Signature
+		return m.Body
 	}
 	return nil
 }

@@ -205,29 +205,29 @@ class Signature : public ::google::protobuf::Message {
   inline ::std::string* release_id();
   inline void set_allocated_id(::std::string* id);
 
-  // optional bytes signature = 2;
-  inline bool has_signature() const;
-  inline void clear_signature();
-  static const int kSignatureFieldNumber = 2;
-  inline const ::std::string& signature() const;
-  inline void set_signature(const ::std::string& value);
-  inline void set_signature(const char* value);
-  inline void set_signature(const void* value, size_t size);
-  inline ::std::string* mutable_signature();
-  inline ::std::string* release_signature();
-  inline void set_allocated_signature(::std::string* signature);
+  // optional bytes body = 2;
+  inline bool has_body() const;
+  inline void clear_body();
+  static const int kBodyFieldNumber = 2;
+  inline const ::std::string& body() const;
+  inline void set_body(const ::std::string& value);
+  inline void set_body(const char* value);
+  inline void set_body(const void* value, size_t size);
+  inline ::std::string* mutable_body();
+  inline ::std::string* release_body();
+  inline void set_allocated_body(::std::string* body);
 
   // @@protoc_insertion_point(class_scope:econix.Signature)
  private:
   inline void set_has_id();
   inline void clear_has_id();
-  inline void set_has_signature();
-  inline void clear_has_signature();
+  inline void set_has_body();
+  inline void clear_has_body();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::std::string* id_;
-  ::std::string* signature_;
+  ::std::string* body_;
 
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
@@ -507,73 +507,73 @@ inline void Signature::set_allocated_id(::std::string* id) {
   }
 }
 
-// optional bytes signature = 2;
-inline bool Signature::has_signature() const {
+// optional bytes body = 2;
+inline bool Signature::has_body() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void Signature::set_has_signature() {
+inline void Signature::set_has_body() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void Signature::clear_has_signature() {
+inline void Signature::clear_has_body() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void Signature::clear_signature() {
-  if (signature_ != &::google::protobuf::internal::kEmptyString) {
-    signature_->clear();
+inline void Signature::clear_body() {
+  if (body_ != &::google::protobuf::internal::kEmptyString) {
+    body_->clear();
   }
-  clear_has_signature();
+  clear_has_body();
 }
-inline const ::std::string& Signature::signature() const {
-  return *signature_;
+inline const ::std::string& Signature::body() const {
+  return *body_;
 }
-inline void Signature::set_signature(const ::std::string& value) {
-  set_has_signature();
-  if (signature_ == &::google::protobuf::internal::kEmptyString) {
-    signature_ = new ::std::string;
+inline void Signature::set_body(const ::std::string& value) {
+  set_has_body();
+  if (body_ == &::google::protobuf::internal::kEmptyString) {
+    body_ = new ::std::string;
   }
-  signature_->assign(value);
+  body_->assign(value);
 }
-inline void Signature::set_signature(const char* value) {
-  set_has_signature();
-  if (signature_ == &::google::protobuf::internal::kEmptyString) {
-    signature_ = new ::std::string;
+inline void Signature::set_body(const char* value) {
+  set_has_body();
+  if (body_ == &::google::protobuf::internal::kEmptyString) {
+    body_ = new ::std::string;
   }
-  signature_->assign(value);
+  body_->assign(value);
 }
-inline void Signature::set_signature(const void* value, size_t size) {
-  set_has_signature();
-  if (signature_ == &::google::protobuf::internal::kEmptyString) {
-    signature_ = new ::std::string;
+inline void Signature::set_body(const void* value, size_t size) {
+  set_has_body();
+  if (body_ == &::google::protobuf::internal::kEmptyString) {
+    body_ = new ::std::string;
   }
-  signature_->assign(reinterpret_cast<const char*>(value), size);
+  body_->assign(reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* Signature::mutable_signature() {
-  set_has_signature();
-  if (signature_ == &::google::protobuf::internal::kEmptyString) {
-    signature_ = new ::std::string;
+inline ::std::string* Signature::mutable_body() {
+  set_has_body();
+  if (body_ == &::google::protobuf::internal::kEmptyString) {
+    body_ = new ::std::string;
   }
-  return signature_;
+  return body_;
 }
-inline ::std::string* Signature::release_signature() {
-  clear_has_signature();
-  if (signature_ == &::google::protobuf::internal::kEmptyString) {
+inline ::std::string* Signature::release_body() {
+  clear_has_body();
+  if (body_ == &::google::protobuf::internal::kEmptyString) {
     return NULL;
   } else {
-    ::std::string* temp = signature_;
-    signature_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    ::std::string* temp = body_;
+    body_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
     return temp;
   }
 }
-inline void Signature::set_allocated_signature(::std::string* signature) {
-  if (signature_ != &::google::protobuf::internal::kEmptyString) {
-    delete signature_;
+inline void Signature::set_allocated_body(::std::string* body) {
+  if (body_ != &::google::protobuf::internal::kEmptyString) {
+    delete body_;
   }
-  if (signature) {
-    set_has_signature();
-    signature_ = signature;
+  if (body) {
+    set_has_body();
+    body_ = body;
   } else {
-    clear_has_signature();
-    signature_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    clear_has_body();
+    body_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   }
 }
 
