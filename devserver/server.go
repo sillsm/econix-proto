@@ -12,6 +12,16 @@ type agent struct {
 	value int
 }
 
+// Define basic interface. TODO(max): replace with GRPC.
+type Agent interface {
+  // Given a transaction, add your signature.
+  Sign(*econix.Transaction)*econix.Signature
+  // Given a trade, encode it as a transaction.
+  EncodeTrade(*econix.Trade)*econix.Transaction 
+  // Given a transaction, decode the trade inside.
+  DecodeTrade(*econix.Transaction)*econix.Trade
+}
+
 var tick int
 var agents []*agent
 var broadcastGroup []chan bool
