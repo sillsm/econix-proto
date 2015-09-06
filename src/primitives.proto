@@ -1,0 +1,17 @@
+package econix;
+
+message Transaction {
+  optional bytes body = 1;
+  repeated Signature signatures = 2;
+}
+
+message Signature {
+  optional string id = 1;
+  optional bytes signature = 2;
+}
+
+message Trade {
+  optional uint64 resource = 1;
+  optional int32  quantity = 2;
+}
+
